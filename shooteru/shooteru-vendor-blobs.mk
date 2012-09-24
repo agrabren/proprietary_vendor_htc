@@ -91,3 +91,18 @@ PRODUCT_COPY_FILES += \
     vendor/htc/shooteru/proprietary/libmllite.so:system/lib/libmllite.so \
     vendor/htc/shooteru/proprietary/libmlplatform.so:system/lib/libmlplatform.so \
     vendor/htc/shooteru/proprietary/sensors.shooteru.so:system/lib/hw/sensors.shooteru.so
+
+# All the blobs necessary for DRM
+PRODUCT_COPY_FILES +=  \
+    vendor/htc/shooteru/proprietary/com.google.widevine.software.drm.xml:system/etc/permissions/com.google.widevine.software.drm.xml \
+    vendor/htc/shooteru/proprietary/com.google.widevine.software.drm.jar:system/framework/com.google.widevine.software.drm.jar \
+    vendor/htc/shooteru/proprietary/libfrsdk.so:system/lib/libfrsdk.so \
+    vendor/htc/shooteru/proprietary/libWVphoneAPI.so:system/lib/libWVphoneAPI.so \
+    vendor/htc/shooteru/proprietary/libwvdrm_L1.so:system/vendor/lib/libwvdrm_L1.so \
+    vendor/htc/shooteru/proprietary/libwvm.so:system/vendor/lib/libwvm.so \
+    vendor/htc/shooteru/proprietary/libWVStreamControlAPI_L1.so:system/vendor/lib/libWVStreamControlAPI_L1.so \
+    vendor/htc/shooteru/proprietary/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    drm.service.enabled=true
+

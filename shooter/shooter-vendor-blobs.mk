@@ -88,3 +88,18 @@ PRODUCT_COPY_FILES += \
     vendor/htc/shooter/proprietary/sound8x60:/system/bin/sound8x60 \
     vendor/htc/shooter/proprietary/3D_calibration:/system/bin/3D_calibration \
     vendor/htc/shooter/proprietary/3D_calibration_main:/system/bin/3D_calibration_main
+
+# All the blobs necessary for DRM
+PRODUCT_COPY_FILES +=  \
+    vendor/htc/shooter/proprietary/com.google.widevine.software.drm.xml:system/etc/permissions/com.google.widevine.software.drm.xml \
+    vendor/htc/shooter/proprietary/com.google.widevine.software.drm.jar:system/framework/com.google.widevine.software.drm.jar \
+    vendor/htc/shooter/proprietary/libfrsdk.so:system/lib/libfrsdk.so \
+    vendor/htc/shooter/proprietary/libWVphoneAPI.so:system/lib/libWVphoneAPI.so \
+    vendor/htc/shooter/proprietary/libwvdrm_L1.so:system/vendor/lib/libwvdrm_L1.so \
+    vendor/htc/shooter/proprietary/libwvm.so:system/vendor/lib/libwvm.so \
+    vendor/htc/shooter/proprietary/libWVStreamControlAPI_L1.so:system/vendor/lib/libWVStreamControlAPI_L1.so \
+    vendor/htc/shooter/proprietary/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    drm.service.enabled=true
+
